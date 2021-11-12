@@ -1,0 +1,147 @@
+.cabecalhoPrincipal .container {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+
+}
+
+.cabecalhoPrincipal-nav {
+	display: flex;
+}
+
+ .rodapePrincipal-patrocinadores .container {
+ 	display: flex;
+ 	justify-content: space-around;
+
+ }
+
+ .rodapePrincipal-patrocinadores-list {
+ 	display: flex;
+ 	align-items: center;
+ 	justify-content: space-around;
+ 	width: 70%;
+ 	margin-right: 5%;
+ }
+
+.rodapePrincipal-contatoForm {
+	width: 25%;
+}
+
+.rodapePrincipal-contatoForm-fieldset {
+	display: flex;
+
+}
+
+.rodapePrincipal-navMap-list {
+	display: flex;
+	/*flex-direction: column;        // atalho para colocar os dois em 1 só abaixo:																					
+	flex-wrap: wrap;*/               /*colocar direção do flex em coluna e depois quebrar para a proxima coluna, tudo dentro da altura de 250px*/
+	flex-flow: column wrap;					
+	height: 250px;
+}
+
+.conteudoPrincipal-cursos {
+	display: flex;
+	flex-wrap: wrap;
+}
+
+.conteudoPrincipal-cursos-link {
+	width: 23%;
+	margin: 1%;
+}
+
+/*para recortar a rebarba desnecessaria de cada
+ elemento no começo e fim das linhas*/
+.conteudoPrincipal-cursos-link: nth-child(4n) {    
+	margin-left: 0;
+}
+
+.conteudoPrincipal-cursos-link: nth-child(4n+1) {
+	margin-left: 0;
+}
+
+.videoSobre .container {
+	display: flex;
+	
+}
+
+.videoSobre-sobre {
+	text-align: center;
+	display: flex;
+	flex-direction: column;
+	flex-grow: 2;
+}
+
+.videoSobre-sobre-list {
+	flex-grow: 1;
+}
+
+.videoSobre-video {
+	flex-grow: 1;
+	flex-shrink: 2;
+}
+
+
+
+
+/*PARTE MOBILE*/
+
+@media(max-width: 768px) {
+
+.rodapePrincipal-patrocinadores .container {
+	flex-direction: column;
+	align-items: center;
+
+	}
+	.cabecalhoPrincipal-nav {
+		flex-direction: column;
+		align-items: initial;
+	}
+
+	.cabecalhoPrincipal .container {
+		flex-direction: column;
+		align-items: initial;
+		text-align: center;
+		
+	}
+
+	.conteudoPrincipal-cursos {
+		flex-direction: column;
+	}
+
+	.conteudoPrincipal-cursos-link {
+		width: 100%
+	}
+
+	.rodapePrincipal-navMap-list {
+		height: auto;
+		
+	}
+
+	.rodapePrincipal-contatoForm {
+		width: 100%;
+	}
+
+	.rodapePrincipal-patrocinadores-list {
+	    margin: 0;
+	    width: 100%;
+
+	}
+
+	.rodapePrincipal-contatoForm-fieldset {
+		justify-content: center;
+	}
+
+	.cabecalhoPrincipal-nav-link-app {
+		order: -1;
+	}
+
+	.videoSobre .container {
+		flex-direction: column;
+	}
+
+	.videoSobre-video {
+		margin: 0 auto;
+	}
+
+}
